@@ -9,7 +9,7 @@ mvn install
 ## Run
 
 ```
-AUTH_ADDRESS=localhost:8080 \
+AUTH_URL=http://localhost:8080 \
 AUTH_APPLICATION_NAME=highrise \
 AUTH_APPLICATION_PASSWORD=test123 \
 NSQ_LOOKUPD_ADDRESS=localhost:1234 \
@@ -20,7 +20,7 @@ java -jar target/bot-agent-jar-with-dependencies.jar
 or 
 
 ```
-export AUTH_ADDRESS=localhost:8080
+export AUTH_URL=http://localhost:8080
 export AUTH_APPLICATION_NAME=highrise
 export AUTH_APPLICATION_PASSWORD=test123
 export NSQ_LOOKUPD_ADDRESS=localhost:1234

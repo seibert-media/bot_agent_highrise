@@ -20,7 +20,7 @@ public class Main {
 
   public static final String AUTH_APPLICATION_NAME = "AUTH_APPLICATION_NAME";
 
-  public static final String AUTH_ADDRESS = "AUTH_ADDRESS";
+  public static final String AUTH_URL = "AUTH_URL";
 
   public static void main(final String[] args) {
     try {
@@ -40,9 +40,9 @@ public class Main {
         System.exit(1);
       }
 
-      final String auth_address = System.getenv(AUTH_ADDRESS);
-      if (auth_address == null || auth_address.isEmpty()) {
-        System.out.println("param " + AUTH_ADDRESS + " is missing");
+      final String auth_url = System.getenv(AUTH_URL);
+      if (auth_url == null || auth_url.isEmpty()) {
+        System.out.println("param " + AUTH_URL + " is missing");
         System.exit(1);
       }
 
@@ -50,7 +50,7 @@ public class Main {
       final Config config = injector.getInstance(Config.class);
       config.setAuthPassword(auth_application_password);
       config.setAuthUser(auth_application_name);
-      config.setAuthAdress(auth_address);
+      config.setAuthUrl(auth_url);
 
       final Runner instance = injector.getInstance(Runner.class);
 
