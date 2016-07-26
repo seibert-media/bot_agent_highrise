@@ -10,7 +10,15 @@ public class Config implements Serializable {
 
   private String authPassword;
 
-  private String authAdress;
+  public String getAuthUrl() {
+    return authUrl;
+  }
+
+  public void setAuthUrl(final String authUrl) {
+    this.authUrl = authUrl;
+  }
+
+  private String authUrl;
 
   public void setAuthPassword(final String authPassword) {
     this.authPassword = authPassword;
@@ -28,11 +36,4 @@ public class Config implements Serializable {
     return authPassword;
   }
 
-  public void setAuthAdress(final String authAdress) {
-    this.authAdress = authAdress;
-  }
-
-  public String getAuthAdress() {
-    return authAdress;
-  }
 }

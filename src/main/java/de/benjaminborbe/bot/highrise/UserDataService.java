@@ -60,7 +60,7 @@ public class UserDataService {
     final Client client = Client.create(clientConfig);
 
     final WebResource webResource = client
-        .resource(UriBuilder.fromUri("http://" + config.getAuthAdress() + "/api/1.0/user/" + internalUser + "/data/" + field).build());
+        .resource(UriBuilder.fromUri(config.getAuthUrl() + "/api/1.0/user/" + internalUser + "/data/" + field).build());
 
     final String response = webResource.header("Authorization", "Bearer " + apiToken).type(MediaType.APPLICATION_FORM_URLENCODED)
         .get(String.class);
@@ -96,7 +96,7 @@ public class UserDataService {
     final ClientConfig clientConfig = new DefaultClientConfig();
     final Client client = Client.create(clientConfig);
     final WebResource webResource = client
-        .resource(UriBuilder.fromUri("http://" + config.getAuthAdress() + "/api/1.0/login").build());
+        .resource(UriBuilder.fromUri(config.getAuthUrl() + "/api/1.0/login").build());
 
     final String s = "{\"authToken\": \"" + authToken + "\"}";
     final byte[] json = s.getBytes("UTF-8");
@@ -130,7 +130,7 @@ public class UserDataService {
     final ClientConfig clientConfig = new DefaultClientConfig();
     final Client client = Client.create(clientConfig);
     final WebResource webResource = client
-        .resource(UriBuilder.fromUri("http://" + config.getAuthAdress() + "/api/1.0/user/" + internalUser + "/data/" + keyToSet).build());
+        .resource(UriBuilder.fromUri(config.getAuthUrl() + "/api/1.0/user/" + internalUser + "/data/" + keyToSet).build());
 
     final byte[] json = objectMapper.writeValueAsBytes(value);
 

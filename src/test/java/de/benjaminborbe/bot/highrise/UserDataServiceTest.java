@@ -15,7 +15,7 @@ public class UserDataServiceTest {
   public void testStoreUserName() throws Exception {
 
     final Config config = new Config();
-    config.setAuthAdress("localhost:6666");
+    config.setAuthUrl("http://localhost:6666");
     config.setAuthUser("auth");
     config.setAuthPassword("test123");
 
@@ -35,7 +35,7 @@ public class UserDataServiceTest {
   public void testUserNotFoundExceptionWhenUserNotRegistered() throws Exception {
 
     final Config config = new Config();
-    config.setAuthAdress("localhost:6666");
+    config.setAuthUrl("http://localhost:6666");
     config.setAuthUser("auth");
     config.setAuthPassword("test123");
 
