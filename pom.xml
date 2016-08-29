@@ -88,7 +88,7 @@
 				<enabled>false</enabled>
 			</snapshots>
 			<id>releases</id>
-			<url>http://maven.tools.seibert-media.net/releases/</url>
+			<url>https://maven.tools.seibert-media.net/releases/</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
@@ -101,7 +101,7 @@
 				<checksumPolicy>fail</checksumPolicy>
 			</snapshots>
 			<id>snapshots</id>
-			<url>http://maven.tools.seibert-media.net/snapshots/</url>
+			<url>https://maven.tools.seibert-media.net/snapshots/</url>
 			<layout>default</layout>
 		</repository>
 	</repositories>
